@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morrxs Chidxs | CULTURA POP AL ALCANCE DE UNA PLAYERA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0d0d0f',
+                        brandPurple: '#8b5cf6',
+                        brandNeon: '#10b981',
+                        brandPink: '#ec4899',
+                        brandYellow: '#facc15'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; background-color: #451826; color: #3A1E25; }
+        .glitch-text {
+            text-shadow: 2px 2px #561823;
+        }
+    </style>
+</head>
+<body class="bg-brandDark text-gray-100 min-h-screen flex flex-col selection:bg-brandPink selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brandPink to-brandPurple flex items-center justify-center text-white font-black text-xl shadow-lg shadow-brandPink/30 group-hover:scale-105 transition">
+                    M
+                </div>
+                <div>
+                    <span class="font-display font-bold text-xl tracking-wider bg-gradient-to-r from-white via-gray-200 to-brandPink bg-clip-text text-transparent">MORRXS CHIDXS</span>
+                    <span class="block text-[10px] tracking-widest text-brandPurple font-semibold uppercase">Urbano & Pop Culture</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#catalogo" class="hover:text-brandPink transition">Catálogo</a>
+                <a href="#nosotros" class="hover:text-brandPink transition">Quiénes Somos</a>
+                <a href="#tallas" class="hover:text-brandPink transition">Guía de Tallas</a>
+                <a href="#faqs" class="hover:text-brandPink transition">FAQs</a>
+                <a href="#contacto" class="hover:text-brandPink transition">Contacto</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleCart()" class="relative p-2.5 rounded-xl bg-gray-900 border border-gray-800 hover:border-brandPink transition flex items-center gap-2 group">
+                    <i class="fa-solid fa-cart-shopping text-brandPink group-hover:scale-110 transition"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-brandPink text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
+                </button>
+                <a href="https://instagram.com" target="_blank" class="hidden sm:flex p-2.5 rounded-xl bg-gray-900 border border-gray-800 hover:border-brandPurple text-gray-300 hover:text-white transition">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden py-20 lg:py-32 border-b border-gray-800/60 bg-gradient-to-b from-brandPurple/10 via-brandDark to-brandDark">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-brandPink/10 border border-brandPink/30 text-brandPink text-xs font-bold tracking-widest uppercase mb-6 shadow-inner">
+                🔥 Nueva Colección Urbana disponible
+            </span>
+            <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Viste tu estilo con actitud <br>
+                <span class="bg-gradient-to-r from-brandPink via-purple-400 to-brandYellow bg-clip-text text-transparent glitch-text">Anime, Rock y Más</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg sm:text-xl mb-10">
+                Playeras 100% algodón peinado con los mejores diseños de series, películas, música y cultura urbana. Estampados duraderos y de alta calidad.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#catalogo" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brandPink to-brandPurple text-white font-bold shadow-lg shadow-brandPink/25 hover:opacity-90 transition transform hover:-translate-y-0.5">
+                    Ver Catálogo <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#contacto" class="px-8 py-4 rounded-xl bg-gray-900 border border-gray-800 hover:border-gray-700 text-gray-300 font-bold transition">
+                    Diseño Personalizado
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold mb-2">Catálogo Chido</h2>
+                <p class="text-gray-400">Selecciona tu categoría favorita o explora todos nuestros modelos.</p>
+            </div>
+            <!-- Category Filters -->
+            <div class="flex flex-wrap gap-2" id="filter-buttons">
+                <button onclick="filterProducts('todos')" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-brandPink text-white transition shadow-md shadow-brandPink/20" data-category="todos">Todos</button>
+                <button onclick="filterProducts('anime')" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-gray-900 border border-gray-800 hover:border-gray-700 text-gray-300 transition" data-category="anime">Anime</button>
+                <button onclick="filterProducts('rock')" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-gray-900 border border-gray-800 hover:border-gray-700 text-gray-300 transition" data-category="rock">Rock</button>
+                <button onclick="filterProducts('pop')" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-gray-900 border border-gray-800 hover:border-gray-700 text-gray-300 transition" data-category="pop">Pop</button>
+                <button onclick="filterProducts('peliculas')" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-gray-900 border border-gray-800 hover:border-gray-700 text-gray-300 transition" data-category="peliculas">Películas & Series</button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Products will be injected via JS -->
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-20 bg-gray-950 border-t border-b border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brandPink font-semibold text-xs tracking-widest uppercase mb-3 block">Nuestra Esencia</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold mb-6">¿Quiénes somos en Morrxs Chidxs?</h2>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Nacimos con una misión clara: romper con lo aburrido. En <strong>Morrxs Chidxs</strong> combinamos nuestra pasión por el anime, la música rock y pop, y los clásicos del cine con la moda urbana contemporánea.
+                    </p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Cada playera está fabricada con algodón de máxima calidad y estampados de alta durabilidad para que resistan el ritmo de tu día a día sin perder el flow. ¡Diseños hechos por fans, para fans!
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-gray-900 border border-gray-800">
+                            <span class="font-display text-2xl font-bold text-brandPink block mb-1">100%</span>
+                            <span class="text-xs text-gray-400">Algodón Peinado Premium</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-900 border border-gray-800">
+                            <span class="font-display text-2xl font-bold text-brandPurple block mb-1">+500</span>
+                            <span class="text-xs text-gray-400">Clientes satisfechos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-brandPink to-brandPurple rounded-3xl blur-xl opacity-20"></div>
+                    <div class="relative bg-gray-900 border border-gray-800 rounded-3xl p-8 flex flex-col justify-center items-center text-center">
+                        <div class="w-20 h-20 rounded-2xl bg-brandPink/10 border border-brandPink/30 flex items-center justify-center text-brandPink text-3xl mb-6">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">¡Sígannos en Instagram!</h3>
+                        <p class="text-sm text-gray-400 mb-6">Etiqueta tus fotos usando #MorrxsChidxs para aparecer en nuestra galería.</p>
+                        <a href="https://instagram.com" target="_blank" class="px-6 py-3 rounded-xl bg-gradient-to-r from-brandPink to-purple-600 text-white font-semibold text-sm shadow-lg shadow-brandPink/20 hover:opacity-90 transition">
+                            <i class="fa-brands fa-instagram mr-2"></i> Ir a Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tallas" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-brandPink font-semibold text-xs tracking-widest uppercase mb-3 block">Fit Urbano</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold mb-4">Guía de Tallas</h2>
+            <p class="text-gray-400">Consulta las medidas aproximadas de nuestras playeras corte regular / unisex para asegurar tu ajuste perfecto.</p>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-gray-800 bg-gray-900/50 backdrop-blur-sm">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="border-b border-gray-800 text-gray-400 text-sm">
+                        <th class="p-4 font-semibold">Talla</th>
+                        <th class="p-4 font-semibold">Ancho (Pecho)</th>
+                        <th class="p-4 font-semibold">Largo (Espalda)</th>
+                        <th class="p-4 font-semibold">Recomendación</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-800/60 text-sm text-gray-300">
+                    <tr>
+                        <td class="p-4 font-bold text-brandPink">S (Chica)</td>
+                        <td class="p-4">48 cm</td>
+                        <td class="p-4">70 cm</td>
+                        <td class="p-4 text-gray-400">Ideal si buscas un fit ajustado o estándar.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-bold text-brandPink">M (Mediana)</td>
+                        <td class="p-4">51 cm</td>
+                        <td class="p-4">72 cm</td>
+                        <td class="p-4 text-gray-400">Fit clásico cómodo.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-bold text-brandPink">L (Grande)</td>
+                        <td class="p-4">54 cm</td>
+                        <td class="p-4">75 cm</td>
+                        <td class="p-4 text-gray-400">Estilo ligeramente holgado / relajado.</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 font-bold text-brandPink">XL (Extra Grande)</td>
+                        <td class="p-4">58 cm</td>
+                        <td class="p-4">78 cm</td>
+                        <td class="p-4 text-gray-400">Estilo oversized / urbano holgado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="faqs" class="py-20 bg-gray-950 border-t border-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brandPink font-semibold text-xs tracking-widest uppercase mb-3 block">Dudas Comunes</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold mb-4">Preguntas Frecuentes</h2>
+                <p class="text-gray-400">Todo lo que necesitas saber sobre envíos, pagos y fabricaciones.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-gray-900 border border-gray-800">
+                    <h3 class="font-display font-bold text-lg mb-2 text-white">¿Cuánto tarda en llegar mi pedido?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Como cada playera se estampa con dedicación, los pedidos tardan de 2 a 4 días hábiles en procesarse y elaborarse, más el tiempo de envío estándar por paquetería (3 a 5 días hábiles).</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-gray-900 border border-gray-800">
+                    <h3 class="font-display font-bold text-lg mb-2 text-white">¿Qué métodos de pago aceptan?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Aceptamos tarjetas de débito y crédito (Visa, MasterCard, Amex) procesadas de manera segura a través de nuestra pasarela en línea, así como pagos express simulados.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-gray-900 border border-gray-800">
+                    <h3 class="font-display font-bold text-lg mb-2 text-white">¿Cómo debo lavar mis playeras para que duren más?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Te recomendamos lavar la playera al revés con agua fría, evitar usar cloro y no planchar directamente sobre el estampado para mantener los colores y la textura intactos por mucho más tiempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="p-8 sm:p-12 rounded-3xl bg-gray-900 border border-gray-800 relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-brandPink/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-brandPink font-semibold text-xs tracking-widest uppercase mb-3 block">Hablemos</span>
+                <h2 class="font-display text-3xl font-extrabold mb-3">¿Tienes alguna duda o diseño especial?</h2>
+                <p class="text-gray-400 text-sm">Mándanos un mensajito y te respondemos con todo el flow lo antes posible.</p>
+            </div>
+            <form onsubmit="handleContactSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Tu Nombre</label>
+                        <input type="text" required placeholder="Ej. Alex" class="w-full px-4 py-3 rounded-xl bg-brandDark border border-gray-800 focus:border-brandPink focus:outline-none text-white text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Correo Electrónico</label>
+                        <input type="email" required placeholder="tu@correo.com" class="w-full px-4 py-3 rounded-xl bg-brandDark border border-gray-800 focus:border-brandPink focus:outline-none text-white text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Mensaje o idea de diseño</label>
+                    <textarea rows="4" required placeholder="Cuéntanos qué playera buscas o si tienes alguna duda..." class="w-full px-4 py-3 rounded-xl bg-brandDark border border-gray-800 focus:border-brandPink focus:outline-none text-white text-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brandPink to-brandPurple text-white font-bold shadow-lg shadow-brandPink/25 hover:opacity-90 transition">
+                    Enviar Mensaje <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+            </form>
+            <div id="contact-success" class="hidden mt-6 p-4 rounded-xl bg-brandNeon/10 border border-brandNeon/30 text-brandNeon text-center text-sm font-semibold">
+                ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo muy pronto.
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-gray-900 border-l border-gray-800 flex flex-col shadow-2xl">
+                <div class="p-6 border-b border-gray-800 flex items-center justify-between">
+                    <h2 class="font-display font-bold text-xl flex items-center gap-2">
+                        <i class="fa-solid fa-cart-shopping text-brandPink">></i> Tu Carrito
+                    </h2>
+                    <button onclick="toggleCart()" class="text-gray-400 hover:text-white p-2">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+                <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <!-- Dynamic Cart Items -->
+                </div>
+                <div class="p-6 border-t border-gray-800 bg-brandDark/50">
+                    <div class="flex justify-between mb-4 font-display text-lg font-bold">
+                        <span>Total:</span>
+                        <span id="cart-total" class="text-brandPink">$0.00 MXN</span>
+                    </div>
+                    <button onclick="proceedToCheckout()" id="checkout-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-brandPink to-brandPurple text-white font-bold shadow-lg shadow-brandPink/25 hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed">
+                        Proceder al Pago en Línea
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeCheckout()"></div>
+        <div class="relative bg-gray-900 border border-gray-800 rounded-3xl p-8 max-w-md w-full z-10 shadow-2xl">
+            <h3 class="font-display font-bold text-2xl mb-2">Simulador de Pago Seguro</h3>
+            <p class="text-gray-400 text-sm mb-6">Ingresa tus datos para completar tu compra simulada en Morrxs Chidxs.</p>
+            <form onsubmit="completeOrder(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Nombre en la tarjeta</label>
+                    <input type="text" required placeholder="Alex Morales" class="w-full px-4 py-3 rounded-xl bg-brandDark border border-gray-800 focus:border-brandPink focus:outline-none text-white text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Número de Tarjeta</label>
+                    <input type="text" required placeholder="4532 •••• •••• 8890" class="w-full px-4 py-3 rounded-xl bg-brandDark border border-gray-800 focus:border-brandPink focus:outline-none text-white text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Expiración</label>
+                        <input type="text" required placeholder="MM/AA" class="w-full px-4 py-3 rounded-xl bg-brandDark border border-gray-800 focus:border-brandPink focus:outline-none text-white text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">CVV</label>
+                        <input type="password" required placeholder="123" class="w-full px-4 py-3 rounded-xl bg-brandDark border border-gray-800 focus:border-brandPink focus:outline-none text-white text-sm">
+                    </div>
+                </div>
+                <button type="submit" class="w-full mt-4 py-4 rounded-xl bg-brandNeon text-gray-950 font-extrabold shadow-lg shadow-brandNeon/20 hover:opacity-90 transition">
+                    Pagar Ahora (<span id="modal-total-amount">$0.00</span>)
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+        <div class="relative bg-gray-900 border border-gray-800 rounded-3xl p-8 max-w-md w-full z-10 text-center shadow-2xl">
+            <div class="w-16 h-16 rounded-full bg-brandNeon/10 border border-brandNeon/30 flex items-center justify-center text-brandNeon text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="font-display font-bold text-2xl mb-2">¡Compra Exitosa!</h3>
+            <p class="text-gray-400 text-sm mb-6">Muchas gracias por tu pedido en <strong>Morrxs Chidxs</strong>. Te hemos enviado los detalles de tu orden a tu correo electrónico. ¡Tu estilo urbano está en camino!</p>
+            <button onclick="resetStore()" class="w-full py-3 rounded-xl bg-gradient-to-r from-brandPink to-brandPurple text-white font-bold text-sm shadow-lg shadow-brandPink/20">
+                Regresar a la Tienda
+            </button>
+        </div>
+    </div>
+
+    <footer class="mt-auto border-t border-gray-800/80 bg-gray-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <span class="font-display font-bold text-lg tracking-wider text-white">MORRXS CHIDXS</span>
+                <p class="text-xs text-gray-500 mt-1">Playeras estampadas con onda urbana, anime y pop culture.</p>
+            </div>
+            <div class="flex items-center gap-6 text-gray-400">
+                <a href="https://instagram.com" target="_blank" class="hover:text-brandPink transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank" class="hover:text-brandPink transition text-xl"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://facebook.com" target="_blank" class="hover:text-brandPink transition text-xl"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <p class="text-xs text-gray-600">&copy; 2026 Morrxs Chidxs. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const products = [
+            { id: 1, name: 'Cyber Cyberpunk Mecha', category: 'anime', price: 349, image: 'https://placehold.co/600x600/18181b/ec4899?text=Cyber+Anime' },
+            { id: 2, name: 'Rock Heavy Metal Riot', category: 'rock', price: 349, image: 'https://placehold.co/600x600/18181b/8b5cf6?text=Rock+Skull' },
+            { id: 3, name: 'Retro 90s Pop Neon', category: 'pop', price: 329, image: 'https://placehold.co/600x600/18181b/facc15?text=Retro+Pop' },
+            { id: 4, name: 'Sci-Fi Classic Cult Movie', category: 'peliculas', price: 349, image: 'https://placehold.co/600x600/18181b/10b981?text=Sci-Fi+Movie' },
+            { id: 5, name: 'Tokyo Street Drift', category: 'anime', price: 349, image: 'https://placehold.co/600x600/18181b/ec4899?text=Tokyo+Street' },
+            { id: 6, name: 'Grunge Vinyl Collector', category: 'rock', price: 329, image: 'https://placehold.co/600x600/18181b/8b5cf6?text=Grunge+Vinyl' }
+        ];
+
+        let cart = [];
+
+        function renderProducts(category = 'todos') {
+            const grid = document.getElementById('products-grid');
+            const filtered = category === 'todos' ? products : products.filter(p => p.category === category);
+            
+            grid.innerHTML = filtered.map(product => `
+                <div class="group bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden flex flex-col hover:border-gray-700 transition">
+                    <div class="relative overflow-hidden bg-gray-950 aspect-square">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x600/18181b/ffffff?text=Playera'">
+                        <span class="absolute top-4 left-4 py-1 px-3 rounded-full bg-brandDark/80 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider text-brandPink border border-gray-800">
+                            ${product.category}
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="font-display font-bold text-lg mb-2 text-white">${product.name}</h3>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-xs text-gray-400 font-semibold uppercase">Talla:</span>
+                            <select id="size-${product.id}" class="bg-brandDark border border-gray-800 rounded-lg px-2 py-1 text-xs text-white focus:outline-none focus:border-brandPink">
+                                <option value="S">S</option>
+                                <option value="M" selected>M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </div>
+                        <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-800/80">
+                            <span class="font-display font-extrabold text-lg text-brandPink">$${product.price} MXN</span>
+                            <button onclick="addToCart(${product.id})" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-brandPink to-brandPurple text-white text-xs font-bold shadow-lg shadow-brandPink/20 hover:opacity-90 transition">
+                                <i class="fa-solid fa-plus mr-1"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterProducts(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if(btn.dataset.category === category) {
+                    btn.className = "filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-brandPink text-white transition shadow-md shadow-brandPink/20";
+                } else {
+                    btn.className = "filter-btn px-4 py-2 rounded-xl text-sm font-semibold bg-gray-900 border border-gray-800 hover:border-gray-700 text-gray-300 transition";
+                }
+            });
+            renderProducts(category);
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const sizeSelect = document.getElementById(`size-${productId}`);
+            const selectedSize = sizeSelect ? sizeSelect.value : 'M';
+            
+            const cartItemKey = `${productId}-${selectedSize}`;
+            const existing = cart.find(item => item.cartKey === cartItemKey);
+
+            if(existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...product, size: selectedSize, cartKey: cartItemKey, quantity: 1 });
+            }
+            updateCartUI();
+            toggleCart();
+        }
+
+        function removeFromCart(cartKey) {
+            cart = cart.filter(item => item.cartKey !== cartKey);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cart-count');
+            const itemsEl = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            countEl.textContent = totalCount;
+            totalEl.textContent = `$${totalPrice} MXN`;
+            document.getElementById('modal-total-amount').textContent = `$${totalPrice} MXN`;
+
+            if(cart.length === 0) {
+                itemsEl.innerHTML = `<div class="text-center py-12 text-gray-500"><i class="fa-solid fa-cart-shopping text-3xl mb-3 block opacity-40"></i>Tu carrito está vacío</div>`;
+                checkoutBtn.disabled = true;
+            } else {
+                checkoutBtn.disabled = false;
+                itemsEl.innerHTML = cart.map(item => `
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-brandDark border border-gray-800">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-sm text-white">${item.name}</h4>
+                            <p class="text-xs text-gray-400">Talla: <span class="text-brandPink font-bold">${item.size}</span></p>
+                            <p class="text-xs text-gray-300 font-bold mt-1">$${item.price} x ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart('${item.cartKey}')" class="text-gray-500 hover:text-red-400 p-2">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        function proceedToCheckout() {
+            toggleCart();
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        function completeOrder(event) {
+            event.preventDefault();
+            closeCheckout();
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        function resetStore() {
+            cart = [];
+            updateCartUI();
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            document.getElementById('contact-success').classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                document.getElementById('contact-success').classList.add('hidden');
+            }, 5000);
+        }
+
+        // Initialize Catalog on Load
+        window.onload = function() {
+            renderProducts('todos');
+        };
+    </script>
+</body>
+</html>
